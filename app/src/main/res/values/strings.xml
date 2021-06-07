@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">MinhaMala</string>
+    <string name="title1">Minhas Viagens</string>
+
+    <string name="addViagem">Adicionar Viagem</string>
+    <string name="editViagem">Editar Viagem</string>
+
+    <string name="local">Local</string>
+    <string name="data">Data</string>
+    <string name="checkin">Check-in</string>
+
+    <string name="sim">S</string>
+    <string name="nao">N</string>
+
+    <string name="save">Salvar</string>
+    <string name="cancel">Cancelar</string>
+    <string name="delete">Deletar</string>
+</resources>
