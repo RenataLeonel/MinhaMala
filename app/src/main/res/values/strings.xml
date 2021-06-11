@@ -5,6 +5,8 @@
     <string name="addViagem">Adicionar Viagem</string>
     <string name="editViagem">Editar Viagem</string>
 
+    <string name="movie_list_description">Check our catalog!</string>
+
     <string name="local">Local</string>
     <string name="data">Data</string>
     <string name="checkin">Check-in</string>

@@ -9,15 +9,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".CadastrarViagem"></activity>
-        <activity android:name=".ViagemActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".SobreActivity"></activity>
+        <activity android:name=".ExibeDicaActivity" />
+        <activity android:name=".PlayerDicasActivity" />
+        <activity
+            android:name=".SplashScreenActivity"
+            android:theme="@style/MinhaMala.FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".CadastrarViagem" />
+        <activity android:name=".ViagemActivity" />
+        <activity android:name=".MainActivity" />
     </application>
 
 </manifest>
