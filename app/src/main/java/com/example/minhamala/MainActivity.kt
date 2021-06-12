@@ -16,12 +16,20 @@ class MainActivity : AppCompatActivity() {
         val verificaAbeturaSplash: SharedPreferences =
             getSharedPreferences("VERIFICAR_SPLASH", Context.MODE_PRIVATE)
 
-
-
-
         btnMinhasViagens.setOnClickListener{
             val intent = Intent(this, ViagemActivity::class.java)
             startActivity(intent)
         }
+
+        btnDicasVideo.setOnClickListener{
+            val intent = Intent(this, ExibeDicaActivity::class.java)
+            startActivity(intent)
+        }
+
+        btnSobre.setOnClickListener{
+            val intent = Intent(this, SobreActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }

@@ -5,7 +5,11 @@
     <string name="addViagem">Adicionar Viagem</string>
     <string name="editViagem">Editar Viagem</string>
 
-    <string name="movie_list_description">Check our catalog!</string>
+    <string name="título_lista_videos">Confira dicas de influenciadores!</string>
+
+    <string name="lorem_ipsum_text">t is a long established fact that a reader will be distracted!\n
+    by the readable content of a page when looking at its layout.
+    </string>
 
     <string name="local">Local</string>
     <string name="data">Data</string>
