@@ -62,5 +62,5 @@ class CadastrarViagem : AppCompatActivity() {
         viagem.checkin = spnCheckin.selectedItem.toString()
         return viagem
     }
-    //testando 123
+    //testando
 }

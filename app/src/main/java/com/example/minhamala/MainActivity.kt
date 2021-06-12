@@ -10,8 +10,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //Aos clicar em minhas viagens a página é redirecionada para a activity ViagemActivity
         btnMinhasViagens.setOnClickListener{
             val intent = Intent(this, ViagemActivity::class.java)
+            startActivity(intent)
+        }
+
+        //Aos clicar em calculadora a página é redirecionada para a activity CalculadoraActivity
+        btnCalculadora.setOnClickListener{
+            val intent = Intent(this, CalculadoraActivity::class.java)
             startActivity(intent)
         }
     }
