@@ -25,6 +25,7 @@ class CalculadoraActivity : AppCompatActivity() {
         de requisições, a RequestQueue.*/
         val queue = Volley.newRequestQueue(this)
 
+        //Requisição para a cotação do EURO
         iconeEuro.setOnClickListener{
             var url = "https://economia.awesomeapi.com.br/EUR-BRL"
             // Resposta de string da requisição
@@ -38,7 +39,7 @@ class CalculadoraActivity : AppCompatActivity() {
 
                     var nome = result.firstOrNull()?.name.toString()
                     var valor = result.firstOrNull()?.high.toString()
-                    Toast.makeText(this, nome + ": " + valor, Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, nome + ": € " + valor, Toast.LENGTH_LONG).show()
                 },
                 //Tratamento de erro
                 Response.ErrorListener { tvCotacaoCalculadora.text = "ERROR " })
@@ -46,6 +47,7 @@ class CalculadoraActivity : AppCompatActivity() {
             queue.add(stringRequest)
         }
 
+        //Requisição para a cotação do DÓLAR
         iconeDolar.setOnClickListener{
             var url = "https://economia.awesomeapi.com.br/USD-BRL"
             // Resposta de string da requisição
@@ -59,7 +61,7 @@ class CalculadoraActivity : AppCompatActivity() {
 
                     var nome = result.firstOrNull()?.name.toString()
                     var valor = result.firstOrNull()?.high.toString()
-                    Toast.makeText(this, nome + ": " + valor, Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, nome + ": U$ " + valor, Toast.LENGTH_LONG).show()
                 },
                 //Tratamento de erro
                 Response.ErrorListener { tvCotacaoCalculadora.text = "ERROR " })

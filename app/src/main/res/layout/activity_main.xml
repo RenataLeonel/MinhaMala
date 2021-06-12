@@ -20,13 +20,13 @@
 
     <Button
         android:id="@+id/btnDicasVideo"
-        android:text="Dicas de viagens"
+        android:text="@string/btnDicasVideo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
     <Button
         android:id="@+id/btnSobre"
-        android:text="Sobre o App"
+        android:text="@string/btnSobre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 

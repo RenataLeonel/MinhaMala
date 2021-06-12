@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         val verificaAbeturaSplash: SharedPreferences =
             getSharedPreferences("VERIFICAR_SPLASH", Context.MODE_PRIVATE)
 
-        //Aos clicar em minhas viagens a página é redirecionada para a activity ViagemActivity
+        //Aos clicar em minhas viagens a página é redirecionada para  ViagemActivity
         btnMinhasViagens.setOnClickListener{
             val intent = Intent(this, ViagemActivity::class.java)
             startActivity(intent)
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        //Aos clicar em calculadora a página é redirecionada para a activity CalculadoraActivity
+        //Aos clicar em calculadora a página é redirecionada para CalculadoraActivity
         btnCalculadora.setOnClickListener{
             val intent = Intent(this, CalculadoraActivity::class.java)
             startActivity(intent)

@@ -13,22 +13,24 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Quanto vale 1 real!"
+        android:text="@string/tvTitleCalculadora"
         android:textSize="30sp"
         android:paddingTop="30dp"
-        android:paddingEnd="30dp" />
+        android:paddingEnd="60dp" />
 
     <ImageView
         android:id="@+id/iconeEuro"
         android:layout_width="347dp"
         android:layout_height="130dp"
-        android:src="@drawable/iconeeuro" />
+        android:src="@drawable/iconeeuro"
+        android:paddingTop="30dp"/>
 
     <ImageView
         android:id="@+id/iconeDolar"
         android:layout_width="347dp"
         android:layout_height="130dp"
-        android:src="@drawable/iconedolar" />
+        android:src="@drawable/iconedolar"
+        android:paddingTop="30dp"/>
 
     <TextView
         android:id="@+id/tvNomeCalculadora"
