@@ -1,4 +1,4 @@
-package com.example.minhamala
+package com.example.viajameupovo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

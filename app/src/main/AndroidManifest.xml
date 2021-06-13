@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.minhamala">
+    package="com.example.viajameupovo">
     <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
     <application
@@ -10,22 +10,47 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SobreActivity"></activity>
-        <activity android:name=".ExibeDicaActivity" />
-        <activity android:name=".PlayerDicasActivity" />
+        <activity android:name="com.example.viajameupovo.SobreActivity">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.viajameupovo.MainActivity" />
+
+        </activity>
+        <activity android:name="com.example.viajameupovo.ExibeDicaActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.viajameupovo.MainActivity" />
+        </activity>
+        <activity android:name="com.example.viajameupovo.PlayerDicasActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.viajameupovo.ExibeDicaActivity" />
+        </activity>
         <activity
-            android:name=".SplashScreenActivity"
+            android:name="com.example.viajameupovo.SplashScreenActivity"
             android:theme="@style/MinhaMala.FullScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CalculadoraActivity"></activity>
-        <activity android:name=".CadastrarViagem" />
-        <activity android:name=".ViagemActivity" />
-        <activity android:name=".MainActivity"></activity>
-       
+        <activity android:name="com.example.viajameupovo.CalculadoraActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.viajameupovo.MainActivity" />
+        </activity>
+        <activity android:name="com.example.viajameupovo.CadastrarViagem">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.viajameupovo.MainActivity" />
+        </activity>
+        <activity android:name="com.example.viajameupovo.ViagemActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.viajameupovo.MainActivity" />
+        </activity>
+        <activity android:name="com.example.viajameupovo.MainActivity">
+        </activity>
     </application>
 </manifest>

@@ -1,4 +1,4 @@
-package com.example.minhamala
+package com.example.viajameupovo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,7 +7,7 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-import com.example.minhamala.model.CalculadoraModel
+import com.example.viajameupovo.model.CalculadoraModel
 import com.google.gson.GsonBuilder
 import kotlinx.android.synthetic.main.activity_calculadora.*
 
@@ -31,9 +31,7 @@ class CalculadoraActivity : AppCompatActivity() {
             // Resposta de string da requisição
             val stringRequest = StringRequest(Request.Method.GET, url,
                 Response.Listener<String> { response ->
-
                     val gson = GsonBuilder().create()
-
                     val result =
                         gson.fromJson(response.toString(), Array<CalculadoraModel>::class.java).toList()
 
@@ -53,9 +51,7 @@ class CalculadoraActivity : AppCompatActivity() {
             // Resposta de string da requisição
             val stringRequest = StringRequest(Request.Method.GET, url,
                 Response.Listener<String> { response ->
-
                     val gson = GsonBuilder().create()
-
                     val result =
                         gson.fromJson(response.toString(), Array<CalculadoraModel>::class.java).toList()
 

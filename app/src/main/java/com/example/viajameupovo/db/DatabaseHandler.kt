@@ -1,15 +1,14 @@
-package com.example.minhamala.db
+package com.example.viajameupovo.db
 
 import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import com.example.minhamala.model.Viagem
+import com.example.viajameupovo.model.Viagem
 
 
 class DatabaseHandler (ctx:Context): SQLiteOpenHelper (ctx, DB_NAME, null, DB_VERSION){
-
     companion object{
         private val DB_VERSION = 1
         private val DB_NAME = "Caduware"

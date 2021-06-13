@@ -1,12 +1,12 @@
-package com.example.minhamala
+package com.example.viajameupovo
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.minhamala.adapter.ViagemListAdapter
-import com.example.minhamala.db.DatabaseHandler
-import com.example.minhamala.model.Viagem
+import com.example.viajameupovo.adapter.ViagemListAdapter
+import com.example.viajameupovo.db.DatabaseHandler
+import com.example.viajameupovo.model.Viagem
 import kotlinx.android.synthetic.main.activity_viagem.*
 
 class ViagemActivity : AppCompatActivity() {

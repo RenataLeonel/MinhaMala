@@ -1,4 +1,4 @@
-package com.example.minhamala
+package com.example.viajameupovo
 
 import android.content.Context
 import android.content.Intent
@@ -16,7 +16,7 @@ class MainActivity : AppCompatActivity() {
         val verificaAbeturaSplash: SharedPreferences =
             getSharedPreferences("VERIFICAR_SPLASH", Context.MODE_PRIVATE)
 
-        //Aos clicar em minhas viagens a página é redirecionada para  ViagemActivity
+        //Ao clicar em minhas viagens a página é redirecionada para  ViagemActivity
         btnMinhasViagens.setOnClickListener{
             val intent = Intent(this, ViagemActivity::class.java)
             startActivity(intent)

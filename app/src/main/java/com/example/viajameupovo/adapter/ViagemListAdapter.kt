@@ -1,4 +1,4 @@
-package com.example.minhamala.adapter
+package com.example.viajameupovo.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-import com.example.minhamala.R
-import com.example.minhamala.model.Viagem
-import kotlinx.android.synthetic.main.content_viagem.view.*
+import com.example.viajameupovo.R
+import com.example.viajameupovo.model.Viagem
+import kotlinx.android.synthetic.main.lista_exibe_viagem.view.*
 
 class ViagemListAdapter(viagemList: ArrayList<Viagem>, internal var ctx:Context, private val callback: (Int) -> Unit):
     RecyclerView.Adapter<ViagemListAdapter.ViewHolder>(){
@@ -21,7 +21,7 @@ class ViagemListAdapter(viagemList: ArrayList<Viagem>, internal var ctx:Context,
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        val view = LayoutInflater.from(ctx).inflate(R.layout.content_viagem, parent, false)
+        val view = LayoutInflater.from(ctx).inflate(R.layout.lista_exibe_viagem, parent, false)
         return ViewHolder(view)
     }
 
