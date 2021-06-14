@@ -33,49 +33,62 @@
             android:background="@color/yellow"
             android:hint="@string/local"
             android:paddingTop="10dp"
-            android:paddingStart="10dp"
-            >
+            android:paddingStart="10dp">
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etLocal"
                 android:layout_width="match_parent"
                 android:background="@color/yellow"
                 android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
-
-            android:layout_height="wrap_content"
+            android:layout_height="61dp"
             android:orientation="horizontal">
-            <com.google.android.material.textfield.TextInputLayout
+
+            <TextView
+                android:id="@+id/etData"
                 android:layout_width="match_parent"
-                android:paddingStart="10dp"
-                android:paddingTop="10dp"
-                android:layout_height="wrap_content"
-                android:hint="@string/data"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:background="@color/yellow"
-                android:layout_weight="1">
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/etData"
-                    android:inputType="date"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
-            </com.google.android.material.textfield.TextInputLayout>
+                android:hint="@string/data"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp" />
+
+            <!--            <com.google.android.material.textfield.TextInputLayout-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:paddingStart="10dp"-->
+            <!--                android:paddingTop="10dp"-->
+            <!--                android:layout_height="wrap_content"-->
+            <!--                android:hint="@string/data"-->
+            <!--                android:background="@color/yellow"-->
+            <!--                android:layout_weight="1">-->
+            <!--                <com.google.android.material.textfield.TextInputEditText-->
+            <!--                    android:id="@+id/etData"-->
+            <!--                    android:inputType="date"-->
+            <!--                    android:layout_width="match_parent"-->
+            <!--                    android:layout_height="wrap_content"/>-->
+            <!--            </com.google.android.material.textfield.TextInputLayout>-->
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_weight="1">
+                android:layout_weight="1"
+                android:orientation="vertical">
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@color/yellow"
-                    android:text="@string/checkin"/>
+                    android:text="@string/checkin" />
+
                 <Spinner
                     android:id="@+id/spnCheckin"
                     android:layout_width="match_parent"
-                    android:background="@color/yellow"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"/>
+                    android:layout_gravity="center"
+                    android:background="@color/yellow" />
 
             </LinearLayout>
         </LinearLayout>

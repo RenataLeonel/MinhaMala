@@ -1,13 +1,20 @@
 package com.example.viajameupovo
 
+import android.app.DatePickerDialog
+import android.icu.util.Calendar
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.InputType
 import android.view.View
 import android.widget.ArrayAdapter
+import android.widget.DatePicker
+import android.widget.TextView
 import android.widget.Toast
 import com.example.viajameupovo.db.DatabaseHandler
 import com.example.viajameupovo.model.Viagem
 import kotlinx.android.synthetic.main.activity_cadastrar_viagem.*
+import java.text.SimpleDateFormat
+import java.util.*
 
 class CadastrarViagem : AppCompatActivity() {
 
@@ -23,6 +30,28 @@ class CadastrarViagem : AppCompatActivity() {
         val arraySpinnerAdapter =
             ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, arraySpinner)
         spnCheckin.adapter = arraySpinnerAdapter
+
+        //Configurar Calendar
+        val textView: TextView = findViewById(R.id.etData)
+        textView.text = SimpleDateFormat("dd/MM/yyyy").format(System.currentTimeMillis())
+
+        var cal = java.util.Calendar.getInstance()
+
+        val dateSetListener = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
+            cal.set(java.util.Calendar.YEAR, year)
+            cal.set(java.util.Calendar.MONTH, monthOfYear)
+            cal.set(java.util.Calendar.DAY_OF_MONTH, dayOfMonth)
+            val myFormat = "dd/MM/yyyy" // mention the format you need
+            val sdf = SimpleDateFormat(myFormat, Locale.US)
+            textView.text = sdf.format(cal.time)
+        }
+
+        textView.setOnClickListener {
+            DatePickerDialog(this@CadastrarViagem, dateSetListener,
+                cal.get(java.util.Calendar.YEAR),
+                cal.get(java.util.Calendar.MONTH),
+                cal.get(java.util.Calendar.DAY_OF_MONTH)).show()
+        }
 
         //Se estiver em modo de edição carrega os dados da viagem por id
         if (intent.getStringExtra("mode") == "Edit") {
@@ -42,8 +71,7 @@ class CadastrarViagem : AppCompatActivity() {
         btnSave.setOnClickListener{
             //Verifica validação do local
             if (validaLocal()) {
-                //Verifica validação da data
-                if (validaData()) {
+
                     //Verifica se está no modo de edição
                     if (intent.getStringExtra("mode") == "Edit") {
                         viagem = populateViagem(viagem!!)
@@ -52,8 +80,6 @@ class CadastrarViagem : AppCompatActivity() {
                         viagem = populateViagem(null)
                         databaseHandler.addViagem(viagem!!) }
                     finish()
-
-                } else { Toast.makeText(this, R.string.erroData, Toast.LENGTH_SHORT).show() }
 
             } else { Toast.makeText(this, R.string.erroLocal, Toast.LENGTH_SHORT).show() }
         }
@@ -68,12 +94,6 @@ class CadastrarViagem : AppCompatActivity() {
     //Retorna true se atender aos requisitos
     fun validaLocal(): Boolean{
         return etLocal.text.toString() != ""
-    }
-
-    //Validar campo vazio e com mais de 10 caracteres na data
-    //Retorna true se atender aos requisitos
-    fun validaData(): Boolean{
-        return etData.text.toString() != "" && etLocal.text.toString().length == 10
     }
 
     //Popular lista de viagem

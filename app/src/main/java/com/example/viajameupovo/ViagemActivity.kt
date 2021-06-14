@@ -44,7 +44,6 @@ class ViagemActivity : AppCompatActivity() {
             val intent = Intent(this, CadastrarViagem::class.java)
             startActivity(intent)
         }
-
     }
 
     override fun onResume(){
