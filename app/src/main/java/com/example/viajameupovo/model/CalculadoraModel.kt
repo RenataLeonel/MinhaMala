@@ -1,4 +1,4 @@
-package com.example.minhamala.model
+package com.example.viajameupovo.model
 
 //Essa classe permite selecionar apenas os dados json que quer apresentar ao usuário
 class CalculadoraModel {

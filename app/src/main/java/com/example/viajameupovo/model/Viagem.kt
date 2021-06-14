@@ -1,4 +1,4 @@
-package com.example.minhamala.model
+package com.example.viajameupovo.model
 
 //Classe do objeto Viagem
 data class Viagem(

@@ -1,33 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#000"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btnMinhasViagens"
-        android:text="@string/btnMinhasViagens"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
-    <Button
-        android:id="@+id/btnCalculadora"
-        android:text="@string/btnCalculadora"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="150dp"
+        android:src="@drawable/viaja_povo_logo"
+        android:paddingBottom="80dp"/>
 
-    <Button
-        android:id="@+id/btnDicasVideo"
-        android:text="@string/btnDicasVideo"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnMinhasViagens"
+            android:text="@string/btnMinhasViagens"
+            android:background="@drawable/button_custom"
+            android:padding="5dp"
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnCalculadora"
+            android:layout_gravity="center"
+            android:text="@string/btnCalculadora"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_custom"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
-    <Button
-        android:id="@+id/btnSobre"
-        android:text="@string/btnSobre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btnDicasVideo"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"
+            android:text="@string/btnDicasVideo"
+            android:background="@drawable/button_custom"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 
+        <Button
+            android:id="@+id/btnSobre"
+            android:layout_marginTop="10dp"
+            android:text="@string/btnSobre"
+            android:layout_gravity="center"
+            android:background="@drawable/button_custom"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
 </LinearLayout>

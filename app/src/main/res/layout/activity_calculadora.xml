@@ -3,33 +3,43 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#000"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".CalculadoraActivity">
-
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:src="@drawable/viaja_povo_logo"
+        android:paddingBottom="30dp"/>
 
     <TextView
         android:id="@+id/tvTitleCalculadora"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/yellow"
         android:text="@string/tvTitleCalculadora"
-        android:textSize="30sp"
-        android:paddingTop="30dp"
-        android:paddingEnd="60dp" />
+        android:textSize="40sp"
+        android:paddingTop="10dp"/>
+
 
     <ImageView
         android:id="@+id/iconeEuro"
-        android:layout_width="347dp"
-        android:layout_height="130dp"
-        android:src="@drawable/iconeeuro"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:src="@drawable/euro_coin"
         android:paddingTop="30dp"/>
 
     <ImageView
         android:id="@+id/iconeDolar"
-        android:layout_width="347dp"
-        android:layout_height="130dp"
-        android:src="@drawable/iconedolar"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dolar_coin"
         android:paddingTop="30dp"/>
 
     <TextView

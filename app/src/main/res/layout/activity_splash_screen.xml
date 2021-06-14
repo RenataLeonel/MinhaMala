@@ -9,15 +9,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="150dp"
-        android:src="@drawable/ic_launcher_foreground" />
+        android:layout_marginTop="250dp"
+        android:src="@drawable/viaja_povo_logo" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:src="@drawable/ic_launcher_background"
-        android:text="Minha Mala"
+        android:text="Viaja Meu Povo"
         android:textColor="@android:color/white"
         android:textSize="30dp" />
 

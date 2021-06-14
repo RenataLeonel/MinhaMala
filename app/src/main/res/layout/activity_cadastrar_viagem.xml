@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#000"
     android:layout_height="match_parent"
     tools:context=".CadastrarViagem">
 
@@ -12,6 +13,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/addViagem"
+        android:textColor="@color/white"
         android:textSize="30sp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/layInput"/>
@@ -27,20 +29,30 @@
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/local">
+            android:textColor="@color/white"
+            android:background="@color/yellow"
+            android:hint="@string/local"
+            android:paddingTop="10dp"
+            android:paddingStart="10dp"
+            >
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/etLocal"
                 android:layout_width="match_parent"
+                android:background="@color/yellow"
                 android:layout_height="wrap_content"/>
         </com.google.android.material.textfield.TextInputLayout>
         <LinearLayout
             android:layout_width="match_parent"
+
             android:layout_height="wrap_content"
             android:orientation="horizontal">
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
+                android:paddingStart="10dp"
+                android:paddingTop="10dp"
                 android:layout_height="wrap_content"
                 android:hint="@string/data"
+                android:background="@color/yellow"
                 android:layout_weight="1">
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etData"
@@ -56,10 +68,12 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@color/yellow"
                     android:text="@string/checkin"/>
                 <Spinner
                     android:id="@+id/spnCheckin"
                     android:layout_width="match_parent"
+                    android:background="@color/yellow"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"/>
 
