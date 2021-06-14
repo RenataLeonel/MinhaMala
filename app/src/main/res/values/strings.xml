@@ -8,7 +8,9 @@
     <string name="addViagem">Adicionar Viagem</string>
     <string name="editViagem">Editar Viagem</string>
     <string name="local">Local</string>
+    <string name="erroLocal">Local inválido</string>
     <string name="data">Data</string>
+    <string name="erroData">Data inválida</string>
     <string name="checkin">Check-in</string>
     <string name="sim">Sim</string>
     <string name="yes">Sim</string>
@@ -44,4 +46,6 @@
      - Local Notification\n
      - Internacionalização de strings utilizadas\n
      </string>
+    <string name="btnChamarNotification">Chamar notificação</string>
+    <string name="txtNotification">Esse texto aparece após o clique na notificação</string>
 </resources>

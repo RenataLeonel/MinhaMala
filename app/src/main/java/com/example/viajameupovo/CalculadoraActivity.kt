@@ -41,7 +41,7 @@ class CalculadoraActivity : AppCompatActivity() {
                 },
                 //Tratamento de erro
                 Response.ErrorListener { tvCotacaoCalculadora.text = "ERROR " })
-            // Add the request to the RequestQueue.
+            // Adiciona a solicitação ao RequestQueue.
             queue.add(stringRequest)
         }
 
@@ -61,7 +61,7 @@ class CalculadoraActivity : AppCompatActivity() {
                 },
                 //Tratamento de erro
                 Response.ErrorListener { tvCotacaoCalculadora.text = "ERROR " })
-            // Add the request to the RequestQueue.
+            // Adiciona a solicitação ao RequestQueue.
             queue.add(stringRequest)
         }
     }
