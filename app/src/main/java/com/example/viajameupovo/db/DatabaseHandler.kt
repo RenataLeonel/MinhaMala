@@ -1,18 +1,19 @@
-package com.example.minhamala.db
+package com.example.viajameupovo.db
 
 import android.content.ContentValues
 import android.content.Context
 import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
-import com.example.minhamala.model.Viagem
+import com.example.viajameupovo.model.Viagem
 
-
+//Configurando Banco de dados
 class DatabaseHandler (ctx:Context): SQLiteOpenHelper (ctx, DB_NAME, null, DB_VERSION){
 
+    //Dados da tabela
     companion object{
         private val DB_VERSION = 1
-        private val DB_NAME = "Caduware"
+        private val DB_NAME = "ListaViagem"
         private val TABLE_NAME = "Viagem"
         private val ID = "Id"
         private val LOCAL = "Local"
@@ -20,22 +21,22 @@ class DatabaseHandler (ctx:Context): SQLiteOpenHelper (ctx, DB_NAME, null, DB_VE
         private val DATA = "Data"
     }
 
-    //Cria tabela
+    //Criando tabela
     override fun onCreate(p0: SQLiteDatabase?) {
         val CREATE_TABLE = "CREATE TABLE $TABLE_NAME ($ID INTEGER PRIMARY KEY, $LOCAL TEXT, $CHECKIN TEXT, $DATA TEXT);"
         p0?.execSQL(CREATE_TABLE)
     }
 
-    //Atualiza versão da tabela e exclui anterior
+    //Atualiza versão da tabela: Exclui versão anterior e cria nova versão
     override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
         val DROP_TABLE = "DROP TABLE IF EXISTS $TABLE_NAME;"
         p0?.execSQL(DROP_TABLE)
         onCreate(p0)
     }
 
-    //Adiciona Viagem no bd
+    //Adiciona Viagem no banco de dados
     fun addViagem (viagem: Viagem){
-        val p0: SQLiteDatabase = writableDatabase
+        val p0: SQLiteDatabase = writableDatabase //escreve no bd
         val values = ContentValues().apply{
             put(LOCAL, viagem.local)
             put(CHECKIN, viagem.checkin)
@@ -47,11 +48,11 @@ class DatabaseHandler (ctx:Context): SQLiteOpenHelper (ctx, DB_NAME, null, DB_VE
 
     //Lê viagem por ID
     fun getViagem(id: Int): Viagem {
-        val p0:SQLiteDatabase = readableDatabase
-        val selectQuery = "SELECT*FROM $TABLE_NAME WHERE $ID = $id;"
+        val p0:SQLiteDatabase = readableDatabase //permite a leitura
+        val selectQuery = "SELECT*FROM $TABLE_NAME WHERE $ID = $id;" //seleciona as informações por Id
         val cursor = p0.rawQuery(selectQuery, null)
         cursor?.moveToFirst()
-        val viagem = populateViagem(cursor)
+        val viagem = populateViagem(cursor) //chama método
         cursor.close()
         return viagem
     }
@@ -60,18 +61,18 @@ class DatabaseHandler (ctx:Context): SQLiteOpenHelper (ctx, DB_NAME, null, DB_VE
     fun  getViagemList(): ArrayList<Viagem>{
         val viagemList = ArrayList<Viagem>()
         val p0 = readableDatabase //Leitura
-        val selectQuery = "SELECT*FROM $TABLE_NAME ORDER BY $LOCAL;" //Lista ordenada
+        val selectQuery = "SELECT*FROM $TABLE_NAME ORDER BY $LOCAL;" //Seleciona lista ordenada por local
         val cursor = p0.rawQuery(selectQuery, null)
         if(cursor != null){ //Se diferente de nulo
             if(cursor.moveToFirst()){ //move para a primeira posição
-                do{
-                    val viagem = populateViagem(cursor)
-                    viagemList.add(viagem)
+                do{ //Faça enquanto
+                    val viagem = populateViagem(cursor) //pega as viagens
+                    viagemList.add(viagem) //Adiciona na lista
                 }while (cursor.moveToNext())
             }
         }
         cursor.close()
-        return viagemList
+        return viagemList //retorna lista populada
     }
 
     //Atualizar viagem
@@ -82,24 +83,24 @@ class DatabaseHandler (ctx:Context): SQLiteOpenHelper (ctx, DB_NAME, null, DB_VE
             put(CHECKIN, viagem.checkin)
             put(DATA, viagem.data)
         }
+        //atualiza por id
         p0.update(TABLE_NAME, values, "$ID=?", arrayOf(viagem.id.toString()))
     }
 
     //Deletar viagem
     fun delViagem(id: Int){
         val p0 = writableDatabase
+        //Deleta por id
         p0.delete(TABLE_NAME, "$ID=?", arrayOf(id.toString()))
     }
 
-
     //Popula objeto viagem
-    //Popular objeto
     fun populateViagem(cursor: Cursor): Viagem{
         val viagem = Viagem()
-        viagem.id = cursor.getInt(cursor.getColumnIndex(ID))
-        viagem.local = cursor.getString(cursor.getColumnIndex(LOCAL))
-        viagem.checkin = cursor.getString(cursor.getColumnIndex(CHECKIN))
-        viagem.data = cursor.getString(cursor.getColumnIndex(DATA))
-        return viagem
+        viagem.id = cursor.getInt(cursor.getColumnIndex(ID)) //pega id
+        viagem.local = cursor.getString(cursor.getColumnIndex(LOCAL)) //pega local
+        viagem.checkin = cursor.getString(cursor.getColumnIndex(CHECKIN)) //pega check-in
+        viagem.data = cursor.getString(cursor.getColumnIndex(DATA)) //pega data
+        return viagem //retorna o objeto populado
     }
 }
