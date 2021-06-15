@@ -43,7 +43,7 @@
      - Volley\n
      - Media e Media Controler\n
      - Local Notification\n
-     - Internacionalização de strings utilizadas\n
+     - Internacionalização\n
      </string>
     <string name="btnChamarNotification">Chamar notificação</string>
     <string name="txtNotification">Esse texto aparece após o clique na notificação</string>

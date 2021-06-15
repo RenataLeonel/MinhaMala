@@ -18,7 +18,7 @@
         <Button
             android:id="@+id/btnMinhasViagens"
             android:text="@string/btnMinhasViagens"
-            android:background="@drawable/button_custom"
+            android:background="@drawable/custom_button_yellow"
             android:padding="5dp"
             android:layout_gravity="center"
             android:layout_width="wrap_content"
@@ -28,7 +28,7 @@
             android:layout_gravity="center"
             android:text="@string/btnCalculadora"
             android:layout_marginTop="10dp"
-            android:background="@drawable/button_custom"
+            android:background="@drawable/custom_button_yellow"
             android:padding="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -38,7 +38,7 @@
             android:layout_marginTop="10dp"
             android:layout_gravity="center"
             android:text="@string/btnDicasVideo"
-            android:background="@drawable/button_custom"
+            android:background="@drawable/custom_button_yellow"
             android:padding="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
@@ -48,7 +48,7 @@
             android:layout_marginTop="10dp"
             android:text="@string/btnSobre"
             android:layout_gravity="center"
-            android:background="@drawable/button_custom"
+            android:background="@drawable/custom_button_yellow"
             android:padding="5dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
