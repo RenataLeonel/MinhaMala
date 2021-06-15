@@ -44,7 +44,7 @@
         android:layout_marginTop="40dp"
         android:textAlignment="center"
         android:gravity="center_vertical"
-        android:text="Componentes utilizados:"
+        android:text="Recursos utilizados:"
         android:textColor="@color/white"
         android:textSize="20dp"
         android:textStyle="bold"
