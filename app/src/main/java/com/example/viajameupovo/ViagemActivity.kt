@@ -65,7 +65,6 @@ class ViagemActivity : AppCompatActivity() {
         if (viagemList.isEmpty()){
             exibeNotification()
         }
-
     }
 
     //Abre a activity com a opção editar viagem

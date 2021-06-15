@@ -10,7 +10,6 @@
     <string name="local">Local</string>
     <string name="erroLocal">Local inválido</string>
     <string name="data">Data</string>
-    <string name="erroData">Data inválida</string>
     <string name="checkin">Check-in</string>
     <string name="sim">Sim</string>
     <string name="yes">Sim</string>

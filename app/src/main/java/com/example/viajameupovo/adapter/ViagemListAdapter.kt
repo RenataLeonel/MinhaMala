@@ -40,7 +40,7 @@ class ViagemListAdapter(viagemList: ArrayList<Viagem>, internal var ctx:Context,
         //Se não recebe a cor vermelha
         else holder.checkin.setTextColor(ctx.getColor(R.color.red))
 
-        //retorno a viagem que iremos chamar na ViagemActivity
+        //retorna a viagem que iremos chamar na ViagemActivity
         holder.lay.setOnClickListener{
             callback(viagem.id)
         }

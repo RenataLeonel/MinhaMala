@@ -31,12 +31,12 @@ class CadastrarViagem : AppCompatActivity() {
             ArrayAdapter<String>(this, R.layout.support_simple_spinner_dropdown_item, arraySpinner)
         spnCheckin.adapter = arraySpinnerAdapter
 
-        //Configurar Calendar
-        val textView: TextView = findViewById(R.id.etData)
+        //Configuração do Calendar
+        val textView: TextView = findViewById(R.id.etData) //linka a variável textView com o id etData
         textView.text = SimpleDateFormat("dd/MM/yyyy").format(System.currentTimeMillis())
 
         var cal = java.util.Calendar.getInstance()
-
+        //Seta valores da data
         val dateSetListener = DatePickerDialog.OnDateSetListener { view, year, monthOfYear, dayOfMonth ->
             cal.set(java.util.Calendar.YEAR, year)
             cal.set(java.util.Calendar.MONTH, monthOfYear)
@@ -45,7 +45,7 @@ class CadastrarViagem : AppCompatActivity() {
             val sdf = SimpleDateFormat(myFormat, Locale.US)
             textView.text = sdf.format(cal.time)
         }
-
+        //Pega valores da data
         textView.setOnClickListener {
             DatePickerDialog(this@CadastrarViagem, dateSetListener,
                 cal.get(java.util.Calendar.YEAR),
@@ -76,11 +76,12 @@ class CadastrarViagem : AppCompatActivity() {
                     if (intent.getStringExtra("mode") == "Edit") {
                         viagem = populateViagem(viagem!!)
                         databaseHandler.updateViagem(viagem!!)
-                    } else {
+                    } else { //Se não popula e adiciona nova viagem
                         viagem = populateViagem(null)
                         databaseHandler.addViagem(viagem!!) }
                     finish()
 
+            //Se o campo estiver vazio mostra toasto com mensagem de local inválido.
             } else { Toast.makeText(this, R.string.erroLocal, Toast.LENGTH_SHORT).show() }
         }
 
@@ -90,8 +91,7 @@ class CadastrarViagem : AppCompatActivity() {
         }
     }
 
-    //Validar campo vazio em local
-    //Retorna true se atender aos requisitos
+    //Validar campo vazio em local - retorna true se atender aos requisitos
     fun validaLocal(): Boolean{
         return etLocal.text.toString() != ""
     }
