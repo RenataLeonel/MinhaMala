@@ -12,9 +12,7 @@
     <string name="data">Data</string>
     <string name="checkin">Check-in</string>
     <string name="sim">Sim</string>
-    <string name="yes">Sim</string>
     <string name="nao">Não</string>
-    <string name="no">Não</string>
     <string name="save">Salvar</string>
     <string name="cancel">Cancelar</string>
     <string name="delete">Deletar</string>
@@ -25,6 +23,7 @@
     </string>
     <string name="textoSobre">App desenvolvido pelos estudantes Renata Leonel e\n Fábio Silva para a disciplina Programação de APP\n Universidade Católica de Brasília, 2021-6
  </string>
+    <string name="titleRecursos" translatable="false">Recursos utilizados:</string>
     <string name="componentesUtilizadoSobre">
      - Activity\n
      - HTTP Request\n
@@ -45,6 +44,5 @@
      - Local Notification\n
      - Internacionalização\n
      </string>
-    <string name="btnChamarNotification">Chamar notificação</string>
-    <string name="txtNotification">Esse texto aparece após o clique na notificação</string>
+
 </resources>

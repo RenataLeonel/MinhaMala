@@ -24,6 +24,7 @@
     </string>
     <string name="textoSobre">App developed by students Renata Leonel and\n Fábio Silva for the APP Programming course\n Catholic University of Brasilia, 2021-6
  </string>
+    <string name="titleRecursos">Resources used:</string>
     <string name="componentesUtilizadoSobre">
      - Activity\n
      - HTTP Request\n
@@ -44,6 +45,5 @@
      - Local Notification\n
      - Internationalization of used strings\n
      </string>
-    <string name="btnChamarNotification">Call notification</string>
 
 </resources>
