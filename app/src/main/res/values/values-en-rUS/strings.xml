@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Travel My People</string>
+    <string name="btnMinhasViagens">My Travels</string>
+    <string name="btnCalculadora">Calculate the Currency</string>
+    <string name="btnDicasVideo">Travel Tips</string>
+    <string name="btnSobre">About the APP</string>
+    <string name="tvTitleViagem">My Travels</string>
+    <string name="addViagem">Add Trip</string>
+    <string name="editViagem">Edit Trip</string>
+    <string name="local">Local</string>
+    <string name="erroLocal">Invalid location</string>
+    <string name="data">Date</string>
+    <string name="checkin">Check-in</string>
+    <string name="sim">Yes</string>
+    <string name="nao">No</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete">Delete</string>
+    <string name="tvTitleCalculadora">How much is R$1?</string>
+    <string name="título_lista_videos">Watch the best tips</string>
+    <string name="lorem_ipsum_text">this a long established fact that a reader will be distracted!\n
+    by the readable content of a page when looking at its layout.
+    </string>
+    <string name="textoSobre">App developed by students Renata Leonel and\n Fábio Silva for the APP Programming course\n Catholic University of Brasilia, 2021-6
+ </string>
+    <string name="componentesUtilizadoSobre">
+     - Activity\n
+     - HTTP Request\n
+     - SQLite e SQLiteOpenHelper\n
+     - ListView\n
+     - RecyclerView\n
+     - TextView\n
+     - ImageView\n
+     - EditText\n
+     - VideoView\n
+     - LinearLayout\n
+     - CustomLayout\n
+     - ConstraintLayout\n
+     - Components Material Design\n
+     - Intent (implicit and explicit)\n
+     - Volley\n
+     - Media e Media Controler\n
+     - Local Notification\n
+     - Internationalization of used strings\n
+     </string>
+    <string name="btnChamarNotification">Call notification</string>
+
+</resources>
